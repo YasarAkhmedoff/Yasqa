@@ -120,15 +120,70 @@ new_setir=new_setir.split("0")
 for i in new_setir:
      cem+=int(i)
 print(cem)
-     
-
-          
-          
-          
 
 
+#15
+metn=input("Metni daxil et:")
+metn=metn.split()
+flag=1
+def funk(soz):
+     new=" "
+     new+=soz
+     return new
+
+for i in metn:
+     if flag==1:
+          print(funk(i))
+          flag=0
+#16
+fayl=input("Faylin adini daxil et:")
+faylin_genislenmesi=input("Faylin genislenmesini daxil et:")
+new_file=""
+
+for i in fayl:
+     if i==".":
+          break
+     else:
+          new_file+=i
+print("Guncellenmis fayl:")
+print(new_file+"."+faylin_genislenmesi)
 
 
+#17
+excel_fayl=input("Daxil et:")
+qadagan_simvol='/\:*?<>|""'
+say=0
+if len(excel_fayl)>10:
+     print("Duzgun fayl adi deyil")
+else:
+     for i in excel_fayl:
+          if i not in qadagan_simvol:
+               say+=1
+if say==len(excel_fayl):
+     print("Bu faylin adi dogrudur!")   
+else:
+     print("sehv!")
 
-
-print(len(metn))
+#18
+qovluq_adi=input("Qovluq adini daxil et:")
+boyuk_herfler="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+kicik_herfler="abcdefghijklmnopqrstuvwxyz"
+say1,say2,say3,say4=0,0,0,0
+reqem="0123456789"
+isare=".-~_=:"
+if len(qovluq_adi)>=5 and len(qovluq_adi)<=15:
+     for val in qovluq_adi:
+          if val in boyuk_herfler:
+               say1+=1
+          if val in kicik_herfler:
+               say2+=1
+          if val in isare:
+               say3+=1
+          if val in reqem:
+               say4+=1
+     if say1>=1 and say2>=1 and say3>=1 and say4>=1:
+          print("Duzgun qovluq adi!")
+     else:
+          print("Duzgun qovluq adi deyil!")
+else:
+     print(f"5<=Simvol sayi>=15 olmalidir")
