@@ -1,0 +1,9 @@
+#Setir ve stringler 
+
+#1"""metn=input("Metni daxil et")
+simvol=input("Simvolu daxil et:")
+
+if simvol in metn:
+     print("True")
+else:
+     print("False")"""
