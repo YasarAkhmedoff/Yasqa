@@ -187,3 +187,15 @@ if len(qovluq_adi)>=5 and len(qovluq_adi)<=15:
           print("Duzgun qovluq adi deyil!")
 else:
      print(f"5<=Simvol sayi>=15 olmalidir")
+
+
+#8
+say=0
+cumle,axtar=input("Cumleni daxil et:"),input("Axtarilan sozu daxil et:")
+new=""
+cumle=cumle.split()
+for i in cumle:
+     if axtar in i:
+          say+=1          
+print(say)
+
