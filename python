@@ -1,9 +1,134 @@
 #Setir ve stringler 
 
-#1"""metn=input("Metni daxil et")
+#1
+"""metn=input("Metni daxil et")
 simvol=input("Simvolu daxil et:")
 
 if simvol in metn:
      print("True")
 else:
      print("False")"""
+
+#2
+metn=input("Metni daxil et:")
+new_metn=""
+for simvol in metn:
+     if simvol=="a":
+          simvol="A"
+          new_metn+=simvol
+     elif simvol=="b":
+          simvol="B"
+          new_metn+=simvol
+     elif simvol=="B":
+          simvol="b"
+          new_metn+=simvol
+     elif simvol=="A":
+          simvol="a"
+          new_metn+=simvol
+     else:
+          new_metn+=simvol
+print(new_metn)
+#3
+metn=input("Metni daxil et:")
+metn=metn.split()
+print(len(metn))
+
+#4
+metn=input("Daxil et:")
+metn=metn.split()
+maxx=0
+def lenn(soz):
+     return len(soz)
+
+for i in metn:
+     if lenn(i)>maxx:
+          maxx=lenn(i)
+print(maxx)
+
+#5
+ad_soyad=input("Varyoxunu daxil et:")
+ad_soyad=ad_soyad.split()
+print(f"{ad_soyad[1][0]}.{ad_soyad[2][0]} {ad_soyad[0]}",sep=" ")
+
+#6
+faylin_unvani=input("Faylin unvanini daxil et:")
+faylin_unvani=faylin_unvani.split("/")
+for i in faylin_unvani:
+     print(i)
+
+#8 (sehv)
+cumle=input("Cumleni daxil et:")
+axtarilan_simvol=input("Axtardigin simvolu daxil et:")
+new_str=""
+cem=0
+def dogruluq(soz):
+     say=0
+     for i in soz:
+          for j in axtarilan_simvol:
+               if i==j:
+                    say+=1
+     if say==len(axtarilan_simvol):
+          return say
+for i in cumle:
+     new_str+=str(dogruluq(i))
+for j in new_str:
+     cem+=int(j)
+print(cem)
+
+#11
+
+cumle=input("Cumleni daxil et:")
+yeni=""
+say=0     
+for i in cumle:
+     if i==" ":
+          yeni+=i
+          say=0
+     else:
+          say+=1
+          if say!=2:
+               yeni+=i
+print(yeni)
+
+#12
+metn=input("Metni daxil et:")
+Sait,Samit,Reqem,Durgu="AOUE","bcmf","3579","!?,;"
+new=""
+new1=""
+say=0
+for i in metn:
+     if i in Sait or i in Samit or i in Reqem or i in Durgu:
+          new+=i
+for val in new:
+     if val not in new1:
+          new1+=val
+for val1 in new1:
+     print(val1,end=" ")
+     
+#13
+setir=input("Daxil et:")
+reqem="0123456789"
+new_setir=""
+cem=0
+for i in setir:
+     if i not in reqem:
+          i="0"
+          new_setir+=i
+     else:
+          new_setir+=i
+new_setir=new_setir.split("0")          
+for i in new_setir:
+     cem+=int(i)
+print(cem)
+     
+
+          
+          
+          
+
+
+
+
+
+
+print(len(metn))
