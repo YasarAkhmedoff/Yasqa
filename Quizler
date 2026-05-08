@@ -1,3 +1,5 @@
+
+#1
 x,y=float(input(":")),float(input(":"))
 
 if x**2+y**2<=1 and y>=6*(x**2) and y>=abs(2*x) and y>=0.5:
@@ -5,3 +7,110 @@ if x**2+y**2<=1 and y>=6*(x**2) and y>=abs(2*x) and y>=0.5:
 else:
      print("Daxil deyiller!")
      
+#2
+def sade(eded):
+     say=0
+     for i in range(1,eded+1):
+          if eded%i==0:
+               say+=1
+     if say==2:
+          return True
+     return False
+cem=0         
+while True:
+     tam_eded=int(input("Ededini daxil et:"))
+     if sade(tam_eded):
+          cem+=tam_eded
+     else:
+          print(f"{tam_eded} sade eded deyil!")
+          break
+print(cem)
+
+#4
+eded=int(input(":"))
+
+def ikilik(x):
+     say=0
+     new=""
+     while x>0:
+          new=str(x%2)+new
+          x//=2
+     for i in new:
+          if i=="1":
+               say+=1
+     return say
+
+if eded%10==int(ikilik(eded)):
+     print("Duz")
+else:
+     print("Sehv")
+
+#5
+eded=int(input(":"))
+
+def sade(x):
+     say=0
+     for i in range(1,x+1):
+          if x%i==0:
+               say+=1
+     if say==2:
+          return True
+     return False
+
+def ikilik(eded):
+     new=""
+     say1=0
+     while eded>0:
+          new=str(eded%2)+new
+          eded//=2
+     for i in new:
+          if i=="1":
+               say1+=1
+     if say1%2==1:
+          return True
+     return False
+def cem(a):
+     cem=0
+     while a>0:
+          cem+=a%10
+          a//=10
+     return cem
+def ikilik1(eded):
+     say=0
+     yeni=""
+     while eded>0:
+          yeni=str(eded%2)+yeni
+          eded//=2
+     for val in yeni:
+          if val=="1":
+               say+=1
+     return say
+
+if eded>0:
+     if sade(eded) and ikilik(eded):
+          print(f"Seviyye 1 suzgecden kecdi!")
+     elif cem(eded)%5==0:
+          print(f"Seviyye 2 suzgec!")
+     else:
+          if ikilik1(eded)>3:
+               print(f"Seviyye 3 suzgec!")
+                    
+else:
+     print("Musbet eded daxil et!")
+
+#3
+eded=int(input(":"))
+step=1
+while eded>9:
+     new=eded
+     cem=0
+     while new>0:
+          qaliq=new%10
+          cem+=qaliq
+          new//=10
+     print(f"Step {step} is :{cem}",end=" ")
+     print()
+     eded=cem
+     step+=1
+print(f"Digital root:{cem}")
+print(f"Total steps:{step}")
