@@ -1,1 +1,100 @@
+#3
+ls=[]
+say=0
+while say<5:
+     eded=int(input(":"))
+     ls+=[eded]
+     say+=1
+for i in range(len(ls)):
+     ls[i]+=5
+print(ls)
+
+#4
+new,ls=[],[]
+say=0
+while say<5:
+     eded=int(input(":"))
+     ls+=[eded]
+     say+=1
+     
+for i in range(len(ls)):
+     if ls[i]%2!=0:
+          new+=[ls[i]]
+print(new)
+
+#4
+from random import*
+ededi_orta,cem,maxx,minn,maxx_indeks,minn_indeks=0,0,0,10,0,0
+ls=[]
+for i in range(7):
+     ls+=[randint(0,10)]
+print(f"Your list is:{ls}")
+for i in ls:
+     cem+=i
+ededi_orta=cem/len(ls)
+print(f"cem ve ededi orta {cem} {ededi_orta}")
+
+for val in ls:
+     if maxx<val:
+          maxx=val
+          maxx_indeks+=1
+print(f"maximum ve onun indeksi: {maxx},{maxx_indeks}")
+
+for val in ls:
+     if minn>val:
+          minn=val
+          minn_indeks+=1
+print(f"minimum ve onun indeksi: {minn} {minn_indeks}")
+
+#5
+
+ls,ls1,ls2=[],[],[]
+cem,cem1=0,0
+from random import*
+for i in range(10):
+     ls+=[randint(0,100)]
+print(f"Your list is:{ls}")
+for val in ls:
+     if val<50:
+          ls1+=[val]
+     else:
+          ls2+=[val]
+for val in ls1:
+     cem+=val
+for val in ls2:
+     cem1+=val
+print(f"Birinci listin ededi ortasi : {cem/len(ls1)}")
+print(f"Ikinci  listin ededi ortasi : {cem1/len(ls2)}")
+
+#6
+ls,ls1,ls2=[],[],[]
+for i in range(1,16):
+     ls+=[i**2]
+     
+for k in range(5):
+     ls1+=[ls[k]]
+for j in range(10,15):
+     ls2+=[ls[j]]
+print(ls1)
+print(ls2)
+
+#7
+List1,List2=[],[]
+from random import*
+for i in range(4):
+     List1+=[randint(1,5)]
+for i in range(4):
+     List2+=[randint(1,5)]
+print(List1)
+print(List2)
+
+for val in range(len(List1)):
+     for val1 in range(len(List2)):
+          if List1[val]==List2[val1]:
+               print("Ortaq element var!")
+               break
+          else:
+               print("Ortaq element yoxdur!")
+
+
 
